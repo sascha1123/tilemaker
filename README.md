@@ -65,6 +65,24 @@ You might also find these resources helpful:
 * See a workflow for "Generating self-hosted maps using tilemaker" at https://blog.kleunen.nl/blog/tilemaker-generate-map.
 * See https://github.com/mapbox/awesome-vector-tiles for a list of renderers which support vector tiles.
 
+## Our Use Case
+
+# download OpenStreetMap germany dataset
+    wget https://download.geofabrik.de/europe/germany-latest.osm.pbf
+
+# download waterpolygons
+see Out-of-the-box setup
+
+# prepare background
+    osmium tags-filter germany-latest.osm.pbf nwr/place=city nwr/admin_level=1,2,4,6 -o   germany_Admin.osm.pbf --overwrite
+
+# concatinate background and tracks
+
+    osmium cat germany_Admin.osm.pbf path/to/iss_struct.osm -o germany_struct.osm.pbf --overwrite
+    
+# make tiles and start server
+see Out-of-the-box setup
+
 ## Why tilemaker?
 
 You might use tilemaker if:

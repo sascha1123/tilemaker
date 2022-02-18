@@ -11,3 +11,9 @@ tilemaker
 # protocol buffers generated headers
 include/osmformat.pb.h
 include/vector_tile.pb.h
+
+# sqlite archives
+*.mbtiles
+
+# coastline data
+coastline
