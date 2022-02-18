@@ -67,20 +67,20 @@ You might also find these resources helpful:
 
 ## Our Use Case
 
-# download OpenStreetMap germany dataset
+### download OpenStreetMap germany dataset
     wget https://download.geofabrik.de/europe/germany-latest.osm.pbf
 
-# download waterpolygons
+### download waterpolygons
 see Out-of-the-box setup
 
-# prepare background
+### prepare background
     osmium tags-filter germany-latest.osm.pbf nwr/place=city nwr/admin_level=1,2,4,6 -o   germany_Admin.osm.pbf --overwrite
 
-# concatinate background and tracks
+### concatinate background and tracks
 
     osmium cat germany_Admin.osm.pbf path/to/iss_struct.osm -o germany_struct.osm.pbf --overwrite
     
-# make tiles and start server
+### make tiles and start server
 see Out-of-the-box setup
 
 ## Why tilemaker?
