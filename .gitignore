@@ -17,3 +17,6 @@ include/vector_tile.pb.h
 
 # coastline data
 coastline
+
+# osm.pbf files
+*.osm.pbf
